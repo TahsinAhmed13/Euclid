@@ -446,5 +446,6 @@ FodyWeavers.xsd
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudio,c++,cmake
 
-# Output directory of CMake in Visual Studio
+# CMake stuff for Visual Studio
 out/*
+CMakeSettings.json

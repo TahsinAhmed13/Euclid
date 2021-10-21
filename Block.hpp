@@ -13,6 +13,7 @@ private:
 
 private: 
 	void resize(); 
+	void adjustText(); 
 
 public: 
 	Block(int size, int maxSize, float maxHeight, float width); 
@@ -21,17 +22,20 @@ public:
 	int getMaxSize() const; 
 	float getMaxHeight() const; 
 	float getWidth() const; 
-	const sf::Vector2f& getPosition() const; 
 	const sf::Color& getFillColor() const; 
 	const sf::Font* getFont() const; 
+	const sf::Color& getTextColor(); 
 
 	void setSize(int size); 
 	void setMaxSize(int maxSize); 
 	void setMaxHeight(float maxHeight); 
 	void setWidth(float width); 
-	void setPosition(const sf::Vector2f& pos); 
 	void setFillColor(const sf::Color& color); 
 	void setFont(const sf::Font& font); 
+	void setTextColor(const sf::Color& color); 
+
+	void rise(int size); 
+	void drop(int size); 
 
 	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const; 
 };
