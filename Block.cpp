@@ -16,7 +16,6 @@ void Block::resize()
 {
 	float width = m_boundBox.getSize().x; 
 	float height = ((float)m_size / m_maxSize) * m_maxHeight; 
-	float heightDiff = m_boundBox.getSize().y - height; 
 	m_boundBox.setSize(sf::Vector2f(width, height)); 
 	m_boundBox.setOrigin(sf::Vector2f(0, height)); 
 	m_sizeText.setString(std::to_string(m_size)); 
@@ -70,7 +69,7 @@ const sf::Font* Block::getFont() const
 	return m_sizeText.getFont(); 
 }
 
-const sf::Color& Block::getTextColor()
+const sf::Color& Block::getTextColor() const
 {
 	return m_sizeText.getFillColor(); 
 }

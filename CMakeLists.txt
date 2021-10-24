@@ -8,6 +8,8 @@ set(SFML_LIBRARY_DIR "C:\\Program Files\\SFML\\lib")
 set(SRC
 	${PROJECT_SOURCE_DIR}/Block.cpp
 	${PROJECT_SOURCE_DIR}/Block.hpp
+	${PROJECT_SOURCE_DIR}/Euclid.cpp
+	${PROJECT_SOURCE_DIR}/Euclid.hpp
 	${PROJECT_SOURCE_DIR}/Main.cpp
 	${PROJECT_BINARY_DIR}/Main.hpp
 )

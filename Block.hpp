@@ -24,7 +24,7 @@ public:
 	float getWidth() const; 
 	const sf::Color& getFillColor() const; 
 	const sf::Font* getFont() const; 
-	const sf::Color& getTextColor(); 
+	const sf::Color& getTextColor() const; 
 
 	void setSize(int size); 
 	void setMaxSize(int maxSize); 
