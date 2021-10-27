@@ -1,5 +1,8 @@
+#include <ctime>
 #include <iostream>
+#include <random>
 #include <string>
+
 #include <SFML/Graphics.hpp>
 
 #include "Euclid.hpp"
@@ -23,8 +26,11 @@ int main()
 		std::cerr << "Cannot load font at " << fontPath << std::endl; 
 		return 0; 
 	}
-	
-	Euclid euclid(sf::Vector2u(WIDTH, HEIGHT), 270, 192); 
+
+	std::default_random_engine randEngine(time(0)); 
+	std::uniform_int_distribution<int> dist(1, 200); 
+
+	Euclid euclid(sf::Vector2u(WIDTH, HEIGHT), dist(randEngine), dist(randEngine)); 
 	euclid.setFont(font); 
 	return euclid.run(); 
 }

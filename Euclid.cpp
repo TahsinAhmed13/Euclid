@@ -1,3 +1,7 @@
+#include <chrono>
+#include <iostream>
+#include <thread>
+
 #include <SFML/Graphics.hpp>
 
 #include "Euclid.hpp"
@@ -30,6 +34,7 @@ void Euclid::setSize(const sf::Vector2u& size)
 	float maxHeight = 0.8 * size.y; 
 	float width = 0.2 * size.x; 
 	m_win.setSize(size); 
+	m_win.setView(sf::View(sf::FloatRect(0, 0, size.x, size.y))); 
 	m_first.setMaxHeight(maxHeight); 
 	m_second.setMaxHeight(maxHeight); 
 	m_first.setWidth(width); 
@@ -84,9 +89,9 @@ int Euclid::run()
 			}
 		}
 
-		// TODO: add timer
-		// step(); 
 		refresh(); 
+		std::this_thread::sleep_for(std::chrono::seconds(1)); 
+		step(); 
 	}
 	return 0; 
 }
