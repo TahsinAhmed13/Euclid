@@ -91,7 +91,7 @@ int Euclid::run()
 
 		refresh(); 
 		std::this_thread::sleep_for(std::chrono::seconds(1)); 
-		step(); 
+		// step(); 
 	}
 	return 0; 
 }
