@@ -2,7 +2,7 @@
 
 A visualization of the Euclidean algorithm to find the GCD using SFML and built with CMake. 
 
-![Euclid](Scorts/Euclid.PNG?raw=true)
+![Euclid](Scrots/Euclid.PNG?raw=true)
 
 ## Building
 
